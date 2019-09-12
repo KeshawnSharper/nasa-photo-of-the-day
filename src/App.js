@@ -20,7 +20,7 @@ let url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2012-03-14"
   return (
     <div className="App">
       <NextComponent />
-      <Background url= {url} />
+      <Background url={url} />
       <Desc />
     </div>
   );

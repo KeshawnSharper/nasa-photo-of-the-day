@@ -1,5 +1,14 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
+import styled from '@emotion/styled'
+
+
+const Explain = styled.div`
+margin-left:10rem;
+width:70%;
+${props => (props.type === 'description' ? `background: lightgrey;` : null)}
+
+`
 
 export function Desc(){
 const [ exp,setExp] = useState("")
@@ -12,8 +21,8 @@ setExp(pict)
 })
 },[])
 return (
-<div>
+<Explain type="description">
     <p>{exp}</p>
-</div>
+</Explain>
 )
 }

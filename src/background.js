@@ -1,5 +1,17 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
+import styled from '@emotion/styled'
+
+/* img{
+  height:50rem;
+  width:100%;
+  }
+*/
+const Img = styled.img`
+height:50rem;
+width:100%;
+border-radius:50px;
+`;
 
 export function Background(props){
 const [ picture,setPicture] = useState("")
@@ -12,5 +24,5 @@ useEffect( () => {
 setPicture(pict)
 })
 },[])
-return <img src={picture}/>
+return <Img src={picture}></Img>
 }
